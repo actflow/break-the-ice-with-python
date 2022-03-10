@@ -260,7 +260,26 @@ rangoli(5)
 ```
 
 ---
+```python
+'''Solution by: actflow
+'''
+import string
+asci=string.ascii_lowercase
 
+def Rangoli(n):
+    for x in range(2*n-1):
+        for y in range(4*n-3):
+            z=abs(x-(n-1))+abs(y-(2*n-2))/2
+            if z%1==0 and z<n:                
+                print(asci[int(z)],end="")
+            else:
+                print("-",end="")
+        print()
+Rangoli(int(input("Enter a natural number up to 26:")))
+
+```
+
+---
 # Question 98
 
 ### **Question**
